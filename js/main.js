@@ -3,7 +3,7 @@
  * Khối 1: Input
  *  Vòng lặp
  * Khối 2: 
- * B1: Viết vòng lặp và khai báo biến
+ * B1: Khai báo biến và viết vòng lặp
  * B2: Sau mỗi lần lặp
  *  Nếu i % 2 == 0 => In ra số chẵn
  *  Nếu i % 2 != 0 => In ra số lẻ
@@ -51,7 +51,7 @@ document.getElementById("btnKetQua2").onclick = function () {
  * Khối 1: Input
  *  Vòng lặp
  * Khối 2: 
- * B1: Viết vòng lặp và khai báo biến
+ * B1: Khai báo biến và viết vòng lặp
  * B2: Sau mỗi lần lặp
  *  Nếu i % 3 == 0 => Đếm số chia hết cho 3
  *  
@@ -63,7 +63,7 @@ document.getElementById("btnKetQua2").onclick = function () {
 // For loop
 document.getElementById("btnDem").onclick = function () {
     var count = 0;
-    for (var i = 0; i < 1000; i++) {
+    for (var i = 0; i <= 1000; i++) {
         if (i % 3 == 0) {
             count++
         }
@@ -76,7 +76,7 @@ document.getElementById("btnDem").onclick = function () {
 document.getElementById("btnDem2").onclick = function () {
     var count = 0;
     var n = 0;
-    while (n < 1000) {
+    while (n <= 1000) {
         if (n % 3 == 0) {
             count++
         }
@@ -91,7 +91,7 @@ document.getElementById("btnDem2").onclick = function () {
  * Khối 1: Input
  *  Vòng lặp
  * Khối 2: 
- * B1: Viết vòng lặp và khai báo biến
+ * B1: Khai báo biến và viết vòng lặp
  * B2: Sau mỗi lần lặp
  *  Điều kiện tiếp tục vòng lặp là tổng bé hơn 10000 thì tăng biến đếm lên 1 rồi cộng tổng với biến đếm đó
  *  
@@ -116,7 +116,7 @@ document.getElementById("btnTim").onclick = function () {
  * Khối 1: Input
  *  Vòng lặp
  * Khối 2: 
- * B1: Viết vòng lặp và khai báo biến
+ * B1: Khai báo biến và viết vòng lặp
  * B2: Sau mỗi lần lặp
  *    luyThua *= soX;
       Sum += luyThua;
@@ -144,10 +144,9 @@ document.getElementById("btnSum").onclick = function () {
  * Khối 1: Input
  *  n
  * Khối 2: 
- * B1: Viết vòng lặp và khai báo biến
+ * B1: Khai báo biến và viết vòng lặp
  * B2: Sau mỗi lần lặp
- *    luyThua *= soX;
-      Sum += luyThua;
+ *    giaiThua *= i
  *  
  * B3: In kết quả
  * Khối 3: Output
@@ -167,9 +166,9 @@ document.getElementById("btnGiaiThua").onclick = function () {
 /**
  * Bài 6:
  * Khối 1: Input
- *  n
+ *  Vòng lặp
  * Khối 2: 
- * B1: Viết vòng lặp và khai báo biến
+ * B1: Khai báo biến và viết vòng lặp
  * B2: Sau mỗi lần lặp
  *    Nếu i % 2 == 0 thì in ra thẻ div chẵn
  *    Nếu i % 2 != 0 thì in ra thẻ div lẻ
@@ -189,7 +188,6 @@ document.getElementById("btnDiv").onclick = function () {
             content += "<div style='background:yellow'>Div Lẻ</div>";
         }
     }
-    console.log(content);
     document.getElementById("txtDiv").innerHTML = content;
 }   
 
@@ -198,11 +196,13 @@ document.getElementById("btnDiv").onclick = function () {
  * Khối 1: Input
  *  soNgTo
  * Khối 2: 
- * B1: Viết vòng lặp và khai báo biến
+ * B1: Khai báo biến và viết vòng lặp
  * B2: 
- * Vòng lặp đầu tiên để kiểm tra các số nguyên tố nhỏ hơn số nhập vào
- * Vòng lặp thứ 2 kiểm tra các số có phải là số nguyên tố hay không 
- *    
+ *  - Vòng lặp đầu tiên để lặp qua các số nhỏ hơn số nhập vào
+ *  - Sau mỗi lần lặp khởi tạo 1 biến đếm  
+ *  - Vòng lặp thứ 2 kiểm tra các số có phải là số nguyên tố hay không 
+ *  - Sau mỗi lần lặp nếu có giá trị nào mà i chia hết thì tăng đếm lên 1 đơn vị
+ *  - Kiểm tra nếu biến đếm bằng 0 thì nối chuỗi các số nguyên tố timg được
  * B3: In kết quả
  * Khối 3: Output
  *  kq
